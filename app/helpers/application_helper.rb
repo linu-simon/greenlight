@@ -123,7 +123,7 @@ module ApplicationHelper
 
   # Indicates whether the recording tables should be hidden
   def hide_recording_tables
-    return false unless recording_consent_required?
+    return true unless recording_consent_required?
     @settings.get_value("Room Configuration Recording") == "disabled"
   end
 
